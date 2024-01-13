@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package helloworld;
+
+
+message GetExceptionRequest {
+  int32 errorCode = 1;
+}
+
+message GetExceptionResponse {
+  string message = 1;
+}
+
+
+service ExceptionService {
+  rpc GetException (GetExceptionRequest) returns (GetExceptionResponse) {}
+}
+
+
